@@ -15,7 +15,7 @@ export default function LoginForm({ userType, onClose }) {
     if (userType === 'Student') {
       navigate('/student-dashboard');
     } else if (userType === 'Teacher') {
-      alert('Teacher dashboard not yet implemented.');
+      navigate('/teacher-dashboard');
     }
 
     onClose();
