@@ -1,31 +1,38 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm({ userType, onClose }) {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Simulate login
-    console.log(`Logging in as ${userType}:`, { email, password });
+    console.log(`Logging in as ${userType}:`, { username, password });
 
-    // Here you’d handle actual login logic
-    onClose(); // close modal after login
+    // Simulate login success
+    if (userType === 'Student') {
+      navigate('/student-dashboard');
+    } else if (userType === 'Teacher') {
+      alert('Teacher dashboard not yet implemented.');
+    }
+
+    onClose();
   };
 
   return (
     <form onSubmit={handleLogin} className="space-y-4">
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
-          Email
+          Username
         </label>
         <input
-          type="email"
+          type="text"
           className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none"
-          placeholder="you@example.com"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          placeholder="your_username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           required
         />
       </div>

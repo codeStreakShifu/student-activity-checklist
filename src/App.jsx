@@ -1,21 +1,20 @@
-
 import React from 'react';
-import LandingPage from './components/LandingPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import './App.css';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import StudentDashboard from './components/StudentDashboard';
 
-function App() {
+export default function App() {
   return (
-    <div className="app min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 flex flex-col">
+    <Router>
       <Header />
-      <main className="flex-1 flex flex-col justify-center">
-        <LandingPage />
-      </main>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/student-dashboard" element={<StudentDashboard />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
-
-export default App
