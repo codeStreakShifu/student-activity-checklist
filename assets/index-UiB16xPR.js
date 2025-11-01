@@ -99,4 +99,4 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
           background: #94a3b8;
         }
-      `})]})}function XR(){return T.jsx(yT,{children:T.jsxs(ZS,{children:[T.jsx(Or,{path:"/",element:T.jsx(qR,{})}),T.jsx(Or,{path:"/student-dashboard",element:T.jsx(YR,{})}),T.jsx(Or,{path:"/teacher-dashboard",element:T.jsx(GR,{})})]})})}iS.createRoot(document.getElementById("root")).render(T.jsx(R.StrictMode,{children:T.jsx(XR,{})}));
+      `})]})}function XR(){return T.jsx(yT,{basename:"/student-activity-checklist",children:T.jsxs(ZS,{children:[T.jsx(Or,{path:"/",element:T.jsx(qR,{})}),T.jsx(Or,{path:"/student-dashboard",element:T.jsx(YR,{})}),T.jsx(Or,{path:"/teacher-dashboard",element:T.jsx(GR,{})})]})})}iS.createRoot(document.getElementById("root")).render(T.jsx(R.StrictMode,{children:T.jsx(XR,{})}));
